@@ -5,9 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multi Step Form - Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="src/js/import.js"></script>
     <main>
       <div class="progress-monitor">
         <ul class="progress-sections">
@@ -61,7 +64,7 @@
             <p class="error-text">This field is required</p>
           </div>
         </div>
-        <div class="input-section input-section__step2">
+        <div class="input-section input-section__step2 display-none">
           <h1>Select your plan</h1>
           <p>You have the option of monthly or yearly billing</p>
           <div class="buttons-section">
@@ -87,7 +90,7 @@
             <p>Yearly</p>
           </div>
         </div>
-        <div class="input-section input-section__step3">
+        <div class="input-section input-section__step3 display-none">
           <h1>Pick add-ons</h1>
           <p>Add-ons help enhance your gaming experience.</p>
           <div class="checkbox-section">
@@ -121,7 +124,7 @@
           </div>
           <p class="price">+$2/mo</p>
         </div>
-        <div class="input-section input-section__step4">
+        <div class="input-section input-section__step4 display-none">
           <h1>Finishing Up</h1>
           <p>Double-check everything looks OK before confirming</p>
           <div class="Prices">
@@ -165,5 +168,6 @@
         </button>
       </div>
     </main>
+    <script src="src/js/main.js"></script>
   </body>
 </html>
