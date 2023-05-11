@@ -7,7 +7,124 @@
     <title>Multi Step Form - Development</title>
   </head>
   <body>
-    <script type="module" src="/main.js"></script>
-    
+    <script type="module" src="src/js/main.js"></script>
+    <main>
+      <div class="progress-monitor">
+        <ul class="progress-sections">
+          <li class="step1">
+            <h1>1</h1>
+            <div class="progress__text">
+              <p>Step 1</p>
+              <p><b>YOUR INFO</b></p>
+            </div>
+          </li>
+          <li class="step2">
+            <h1>2</h1>
+            <div class="progress__text">
+              <p>Step 2</p>
+              <p><b>SELECT PLAN</b></p>
+            </div>
+          </li>
+          <li class="step3">
+            <h1>3</h1>
+            <div class="progress__text">
+              <p>Step 3</p>
+              <p><b>ADD-ONS</b></p>
+            </div>
+          </li>
+          <li class="step4">
+            <h1>4</h1>
+            <div class="progress__text">
+              <p>Step 4</p>
+              <p><b>SUMMARY</b></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="input-section">
+        <div class="input-section input-section__step1">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number</p>
+          <div class="text-section">
+            <p class="label">Name</p>
+            <input type="text">
+            <p class="error-text">This field is required</p>
+          </div>
+          <div class="text-section">
+            <p class="label">Email Address</p>
+            <input type="text">
+            <p class="error-text">This field is required</p>
+          </div>
+          <div class="text-section">
+            <p class="label">Phone Number</p>
+            <input type="text">
+            <p class="error-text">This field is required</p>
+          </div>
+        </div>
+        <div class="input-section input-section__step2">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing</p>
+          <div class="buttons-section">
+            <button class="plan-selection">
+            <img src="" alt="">
+            <h2>Arcade</h2>
+            <p>$9/mo</p>
+           </button>
+           <button class="plan-selection">
+            <img src="" alt="">
+            <h2>Advanced</h2>
+            <p>$9/mo</p>
+           </button>
+           <button class="plan-selection">
+            <img src="" alt="">
+            <h2>Pro</h2>
+            <p>$9/mo</p>
+           </button>
+          </div> 
+          <div class="checkbox">
+            <p>Montly</p>
+            <input type="checkbox" class="toggle">
+            <p>Yearly</p>
+          </div>
+        </div>
+        <div class="input-section input-section__step3">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+          <div class="checkbox-section">
+            <div>
+              <input type="checkbox" name="" id="">
+              <div>
+                <h1>Online Service</h1>
+                <p>Access to multiplayer games</p>
+              </div>
+            </div>
+            <p class="price">+$1/mo</p>
+          </div>
+          <div class="checkbox-section">
+            <div>
+              <input type="checkbox" name="" id="">
+              <div>
+                <h1>Larger Storage</h1>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+            </div>
+            <p class="price">+$2/mo</p>
+          </div>
+          <div class="checkbox-section">
+            <div>
+              <input type="checkbox" name="" id="">
+              <div>
+                <h1>Customizable Profile</h1>
+                <p>Custom theme on your profile</p>
+              </div>
+            </div>
+          </div>
+          <p class="price">+$2/mo</p>
+        </div>
+        <div class="input-section input-section__step4">
+
+        </div>
+      </div>
+    </main>
   </body>
 </html>
