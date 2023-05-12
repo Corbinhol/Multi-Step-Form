@@ -1,0 +1,102 @@
+.mobile-background {
+    position: absolute;
+    z-index: -1;
+    width: 100vw
+}
+
+.desktop-background {
+    display: none;
+}
+
+.progress-monitor p {
+    display: none;
+}
+
+.progress-sections {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.progress-sections {
+    padding: 2em
+}
+
+.progress__text {
+    display: none;
+}
+
+.progress-sections h1 {
+    margin: 0 .5em;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--pastel-blue);
+    border: .1em solid var(--pastel-blue);
+    padding: .5em .8em;
+    border-radius: 2em;
+}
+
+.progress-sections h1.selected {
+    color: var(--marine-blue);
+    background-color: var(--pastel-blue);
+}
+
+main {
+    background: none;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    
+    .progress__text {
+        display: inline-block;
+    }
+    
+
+    main {
+        background-color: white;
+        flex-direction: row;
+    }
+
+    .mobile-background {
+        display: none;
+    }
+
+    .progress-monitor p {
+        display: inline-block;
+    }
+
+    .progress-sections {
+        flex-direction: column;
+    }
+
+    .progress-monitor {
+        overflow: hidden;
+        border-radius: 1em;
+        margin: 1.5em;
+        width: 25%;
+        height: 94%;
+        background-image: url('../images/bg-sidebar-desktop.svg');
+        background-size: cover;
+    }
+
+    .progress-monitor h1 {
+        display: inline;
+        width: fit-content;
+        padding: .4em .8em;
+        margin: 0 1.5em 0 0
+    }
+
+    p {
+        color: white;
+    }
+
+    .progress-sections li {
+        display: flex;
+        margin: .8em 0
+    }
+
+    .text-step {
+        color: var(--light-gray);
+    }
+}

@@ -12,160 +12,182 @@
   <body>
     <script type="module" src="src/js/import.js"></script>
     <main>
-      <div class="progress-monitor">
-        <ul class="progress-sections">
-          <li class="step1">
-            <h1>1</h1>
-            <div class="progress__text">
-              <p>Step 1</p>
-              <p><b>YOUR INFO</b></p>
-            </div>
-          </li>
-          <li class="step2">
-            <h1>2</h1>
-            <div class="progress__text">
-              <p>Step 2</p>
-              <p><b>SELECT PLAN</b></p>
-            </div>
-          </li>
-          <li class="step3">
-            <h1>3</h1>
-            <div class="progress__text">
-              <p>Step 3</p>
-              <p><b>ADD-ONS</b></p>
-            </div>
-          </li>
-          <li class="step4">
-            <h1>4</h1>
-            <div class="progress__text">
-              <p>Step 4</p>
-              <p><b>SUMMARY</b></p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="input-section">
-        <div class="input-section input-section__step1">
-          <h1>Personal info</h1>
-          <p>Please provide your name, email address, and phone number</p>
-          <div class="text-section">
-            <p class="label">Name</p>
-            <input type="text">
-            <p class="error-text">This field is required</p>
-          </div>
-          <div class="text-section">
-            <p class="label">Email Address</p>
-            <input type="text">
-            <p class="error-text">This field is required</p>
-          </div>
-          <div class="text-section">
-            <p class="label">Phone Number</p>
-            <input type="text">
-            <p class="error-text">This field is required</p>
-          </div>
-        </div>
-        <div class="input-section input-section__step2 display-none">
-          <h1>Select your plan</h1>
-          <p>You have the option of monthly or yearly billing</p>
-          <div class="buttons-section">
-            <button class="plan-selection">
-            <img src="" alt="">
-            <h2>Arcade</h2>
-            <p>$9/mo</p>
-           </button>
-           <button class="plan-selection">
-            <img src="" alt="">
-            <h2>Advanced</h2>
-            <p>$9/mo</p>
-           </button>
-           <button class="plan-selection">
-            <img src="" alt="">
-            <h2>Pro</h2>
-            <p>$9/mo</p>
-           </button>
-          </div> 
-          <div class="checkbox">
-            <p>Montly</p>
-            <input type="checkbox" class="toggle">
-            <p>Yearly</p>
-          </div>
-        </div>
-        <div class="input-section input-section__step3 display-none">
-          <h1>Pick add-ons</h1>
-          <p>Add-ons help enhance your gaming experience.</p>
-          <div class="checkbox-section">
-            <div>
-              <input type="checkbox" name="" id="">
-              <div>
-                <h1>Online Service</h1>
-                <p>Access to multiplayer games</p>
+      <img src="src/images/bg-sidebar-mobile.svg" class="mobile-background">
+      <img src="src/images/bg-sidebar-desktop.svg" class="desktop-background">
+        <div class="progress-monitor">
+          <ul class="progress-sections">
+            <li class="step1">
+              <h1 class="selected">1</h1>
+              <div class="progress__text">
+                <p class="text-step">Step 1</p>
+                <br>
+                <p><b>YOUR INFO</b></p>
               </div>
+            </li>
+            <li class="step2">
+              <h1>2</h1>
+              <div class="progress__text">
+                <p class="text-step">Step 2</p>
+                <br>
+                <p><b>SELECT PLAN</b></p>
+              </div>
+            </li>
+            <li class="step3">
+              <h1>3</h1>
+              <div class="progress__text">
+                <p class="text-step">Step 3</p>
+                <br>
+                <p><b>ADD-ONS</b></p>
+              </div>
+            </li>
+            <li class="step4">
+              <h1>4</h1>
+              <div class="progress__text">
+                <p class="text-step">Step 4</p>
+                <br>
+                <p><b>SUMMARY</b></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="input-button-section">
+          <div id="input-section__step1" class="input-section input-section__step1 display-none">
+            <h1>Personal info</h1>
+            <h2>Please provide your name, email address, and phone number</h2>
+            <div class="text-section">
+              <div class="text-section__label">
+                <p class="label">Name</p>
+                <p class="error-text display-none">This field is required</p>
+              </div>
+              <input type="text" class="" placeholder="e.g. Steven King">
             </div>
-            <p class="price">+$1/mo</p>
+            <div class="text-section">
+              <div class="text-section__label">
+                <p class="label">Email Address</p>
+                <p class="error-text display-none">This field is required</p>
+              </div>
+              <input type="text" placeholder="e.g. stevenking@lorem.com">
+            </div>
+            <div class="text-section">
+              <div class="text-section__label">
+                <p class="label">Phone Number</p>
+                <p class="error-text display-none">This field is required</p>
+              </div>
+              <input type="text" placeholder="+1 (123) 456 7890">
+            </div>
           </div>
-          <div class="checkbox-section">
-            <div>
-              <input type="checkbox" name="" id="">
+          <div id="input-section__step2" class="input-section input-section__step2 display-none">
+            <h1>Select your plan</h1>
+            <h2>You have the option of monthly or yearly billing</h2>
+            <div class="buttons-section">
+              <button class="plan-selection selected">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E"/><path fill="#FFF" fill-rule="nonzero" d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z"/></g></svg>
+              <div class="plan-selection__text-section">
+                <h2>Arcade</h2>
+                <p>$9/mo</p>
+              </div>
+             </button>
+             <button class="plan-selection">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#F9818E"/><path fill="#FFF" fill-rule="nonzero" d="M25.057 15H14.944C12.212 15 10 17.03 10 19.885c0 2.857 2.212 4.936 4.944 4.936h10.113c2.733 0 4.943-2.08 4.943-4.936S27.79 15 25.057 15ZM17.5 20.388c0 .12-.108.237-.234.237h-1.552v1.569c0 .126-.138.217-.259.217H14.5c-.118 0-.213-.086-.213-.203v-1.583h-1.569c-.126 0-.217-.139-.217-.26v-.956c0-.117.086-.213.202-.213h1.584v-1.554c0-.125.082-.231.203-.231h.989c.12 0 .236.108.236.234v1.551h1.555c.125 0 .231.083.231.204v.988Zm5.347.393a.862.862 0 0 1-.869-.855c0-.472.39-.856.869-.856.481 0 .87.384.87.856 0 .471-.389.855-.87.855Zm1.9 1.866a.86.86 0 0 1-.87-.852.86.86 0 0 1 .87-.855c.48 0 .87.38.87.855a.86.86 0 0 1-.87.852Zm0-3.736a.862.862 0 0 1-.87-.854c0-.472.39-.856.87-.856s.87.384.87.856a.862.862 0 0 1-.87.854Zm1.899 1.87a.862.862 0 0 1-.868-.855c0-.472.389-.856.868-.856s.868.384.868.856a.862.862 0 0 1-.868.855Z"/></g></svg>
+              <div class="plan-selection__text-section">
+                <h2>Advanced</h2>
+                <p>$12/mo</p>
+              </div>
+             </button>
+             <button class="plan-selection">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#483EFF"/><path fill="#FFF" fill-rule="nonzero" d="M26.666 13H13.334A3.333 3.333 0 0 0 10 16.333v7.193a3.447 3.447 0 0 0 2.14 3.24c1.238.5 2.656.182 3.56-.8L18.52 23h2.96l2.82 2.966a3.2 3.2 0 0 0 3.56.8 3.447 3.447 0 0 0 2.14-3.24v-7.193A3.333 3.333 0 0 0 26.666 13Zm-9.333 6H16v1.333a.667.667 0 0 1-1.333 0V19h-1.333a.667.667 0 0 1 0-1.334h1.333v-1.333a.667.667 0 1 1 1.333 0v1.333h1.333a.667.667 0 1 1 0 1.334Zm7.333 2a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333ZM26 18.333a1.333 1.333 0 1 1-2.667 0 1.333 1.333 0 0 1 2.667 0Z"/></g></svg>
+              <div class="plan-selection__text-section">
+                <h2>Pro</h2>
+                <p>$15/mo</p>
+              </div>
+             </button>
+            </div> 
+            <div class="checkbox">
+              <p class="selected">Monthly</p>
+              <label class="toggle">
+                <input type="checkbox">
+                <span class="knob"></span>
+              </label>
+              <p>Yearly</p>
+            </div>
+          </div>
+          <div id="input-section__step3" class="input-section input-section__step3">
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience.</p>
+            <div class="checkbox-section">
               <div>
-                <h1>Larger Storage</h1>
-                <p>Extra 1TB of cloud save</p>
+                <input type="checkbox" name="" id="">
+                <div>
+                  <h1>Online Service</h1>
+                  <p>Access to multiplayer games</p>
+                </div>
+              </div>
+              <p class="price">+$1/mo</p>
+            </div>
+            <div class="checkbox-section">
+              <div>
+                <input type="checkbox" name="" id="">
+                <div>
+                  <h1>Larger Storage</h1>
+                  <p>Extra 1TB of cloud save</p>
+                </div>
+              </div>
+              <p class="price">+$2/mo</p>
+            </div>
+            <div class="checkbox-section">
+              <div>
+                <input type="checkbox" name="" id="">
+                <div>
+                  <h1>Customizable Profile</h1>
+                  <p>Custom theme on your profile</p>
+                </div>
               </div>
             </div>
             <p class="price">+$2/mo</p>
           </div>
-          <div class="checkbox-section">
-            <div>
-              <input type="checkbox" name="" id="">
+          <div id="input-section__step4" class="input-section input-section__step4 display-none">
+            <h1>Finishing Up</h1>
+            <p>Double-check everything looks OK before confirming</p>
+            <div class="Prices">
               <div>
-                <h1>Customizable Profile</h1>
-                <p>Custom theme on your profile</p>
+                <div>
+                  <h2>Arcade (Monthly)</h2> 
+                  <button>Change</button>
+                </div>
+                <p class="price">$9/mo</p>
+              </div>
+              <hr>
+              <div class="sub-service">
+                <p>Online Service</p>
+                <p><b>+$1/mo</b></p>
+              </div>
+              <div class="sub-service">
+                <p>Larger Storage</p>
+                <p><b>+$2/mo</b></p>
+              </div>
+              <div class="sub-service">
+                <p>Customizable Profile</p>
+                <p><b>+$2/mo</b></p>
               </div>
             </div>
-          </div>
-          <p class="price">+$2/mo</p>
-        </div>
-        <div class="input-section input-section__step4 display-none">
-          <h1>Finishing Up</h1>
-          <p>Double-check everything looks OK before confirming</p>
-          <div class="Prices">
-            <div>
-              <div>
-                <h2>Arcade (Monthly)</h2> 
-                <button>Change</button>
-              </div>
-              <p class="price">$9/mo</p>
+            <div class="tax-section">
+              <p>Tax</p>
+              <p>+$0.83/mo<p>
             </div>
-            <hr>
-            <div class="sub-service">
-              <p>Online Service</p>
-              <p><b>+$1/mo</b></p>
-            </div>
-            <div class="sub-service">
-              <p>Larger Storage</p>
-              <p><b>+$2/mo</b></p>
-            </div>
-            <div class="sub-service">
-              <p>Customizable Profile</p>
-              <p><b>+$2/mo</b></p>
+            <div class="total-section">
+              <p>Total (per month)</p>
+              <h3>+$12/mo</h3>
             </div>
           </div>
-          <div class="tax-section">
-            <p>Tax</p>
-            <p>+$0.83/mo<p>
-          </div>
-          <div class="total-section">
-            <p>Total (per month)</p>
-            <h3>+$12/mo</h3>
+          <div class="nav-buttons">
+            <button id="go-back">
+              Go Back
+            </button>
+            <button id="continue-button">
+              Continue
+            </button>
           </div>
         </div>
-      </div>
-      <div class="nav-buttons">
-        <button id="go-back">
-          Go Back
-        </button>
-        <button id="Continue">
-          Continue
-        </button>
       </div>
     </main>
     <script src="src/js/main.js"></script>
