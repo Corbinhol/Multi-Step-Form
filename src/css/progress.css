@@ -34,6 +34,7 @@
     border: .1em solid var(--pastel-blue);
     padding: .5em .8em;
     border-radius: 2em;
+    height: fit-content;
 }
 
 .progress-sections h1.selected {
@@ -83,7 +84,7 @@ main {
     .progress-monitor h1 {
         display: inline;
         width: fit-content;
-        padding: .4em .8em;
+        padding: .5em .8em;
         margin: 0 1.5em 0 0
     }
 

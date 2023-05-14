@@ -5,3 +5,5 @@ import '../css/progress.css';
 import '../css/personal-info.css';
 import '../css/select-plan.css';
 import '../css/add-ons.css';
+import '../css/summary.css';
+import '../css/thank-you.css'
