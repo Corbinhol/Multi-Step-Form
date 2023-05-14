@@ -1,0 +1,90 @@
+.input-section__step2 button {
+    background: none;
+    border: .1em var(--light-gray) solid;
+    width: 100%;
+    display: flex;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: .7em;
+}
+
+.input-section__step2 button:hover {
+    transition: .4s;
+    border: .1em var(--purplish-blue) solid;
+}
+
+.input-section__step2 button.selected {
+    border: .1em var(--purplish-blue) solid;
+    background-color: var(--purplish-blue-faded);
+}
+
+.input-section__step2 button h2 {
+    margin: 0;
+    width: fit-content;
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+
+
+.plan-selection__text-section {
+    margin: 0 0 0 1em;
+}
+
+.input-section__step2 button p {
+    width: fit-content;
+    color: var(--cool-gray)
+}
+
+.input-section__step2 .checkbox {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--magnolia);
+    padding: .5em;
+    border-radius: 1em;
+}
+
+.input-section__step2 .checkbox p {
+
+    height: fit-content;
+    margin: 0 1em;
+    font-weight: 500;
+    font-size: 1em;
+    color: var(--cool-gray);
+}
+
+.input-section__step2 .checkbox p.unselected {
+    transition: .2s color;
+    color: var(--cool-gray);
+}
+
+.input-section__step2 .checkbox p.selected {
+    transition: .2s color;
+    color: var(--marine-blue);
+}
+
+.input-section__step2 .yearly {
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+    .buttons-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+    }
+
+    .input-section__step2 button {
+        flex-direction: column;
+    }
+
+    .input-section__step2 button svg {
+        margin: .1em 0 3em 0
+    }
+
+    .plan-selection__text-section {
+        margin: 0;
+    }
+}

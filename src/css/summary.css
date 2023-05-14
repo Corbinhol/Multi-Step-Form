@@ -1,0 +1,98 @@
+.input-section__step4 p {
+    color: var(--cool-gray);
+    height: fit-content;
+}
+
+.input-section__step4 button {
+    border: none;
+    background: none;
+    color: var(--cool-gray);
+    text-decoration: underline;
+    padding: 0;
+}
+
+.prices h2 {
+    margin: 0;
+    color: var(--marine-blue);
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.prices h2 #charge-time {
+    color: var(--marine-blue-light)
+}
+
+.prices .sub-service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .6em 0 .6em 0;
+}
+
+.prices .plan {
+    margin: 0 0 1em 0;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: var(--cool-gray);;
+}
+
+.input-section__step4 .price {
+    color: var(--marine-blue);
+}
+
+.prices {
+    background-color: var(--magnolia);
+    padding: .6em;
+    border-radius: .3em;
+}
+
+.tax-section {
+    display: flex;
+    justify-content: space-between;
+    padding: .4em .3em;
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .4em .3em;
+}
+
+.total-section h3 {
+    color: var(--purplish-blue);
+    font-weight: 900;
+}
+
+@media (min-width: 1024px) {
+    .prices h2 {
+        font-size: 1.1rem;
+    }
+
+    .input-section .price {
+        font-size: 1rem
+    }
+
+    .total-section h3 {
+        font-size: 1.4rem
+    }
+
+    .input-section p {
+        font-size: 1rem;
+    }
+
+    .prices .sub-service {
+        margin: 1em .6em
+    }
+
+    .tax-section {
+        padding: .7em 1.2em;
+    }
+
+    .total-section {
+        padding: .7em 1.2em;
+    }
+}

@@ -1,0 +1,94 @@
+
+.input-button-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section {
+    background-color: var(--white);
+    border-radius: 1em;
+    width: 90%;
+    padding: 1.5em
+}
+
+.input-section h1 {
+    color: var(--marine-blue);
+    font-size: 1.7em;
+    font-weight: 900;
+    margin: .5em 0 .3em 0
+}
+
+.input-section h2 {
+    color: var(--cool-gray);
+    font-weight: 400;
+    font-size: 1.1em;
+    max-width: 26ch;
+    margin-bottom: 1.5em;
+}
+
+.input-section p {
+    font-size: .9em;
+}
+
+.input-section .label {
+    color: var(--marine-blue)
+}
+
+.input-section .text-section__label {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 .3em 0
+}
+
+.text-section input {
+    width: 100%;
+    height: 2.3em;
+    padding: 1em;
+    border-radius: .5em;
+    border: .1em var(--light-gray) solid; 
+    color: var(--marine-blue);
+}
+
+.text-section {
+    margin: 1em 0
+}
+
+input.error {
+    border: .1em var(--strawberry-red) solid; 
+}
+
+input:focus {
+    border: .1em var(--purplish-blue) solid;
+}
+
+*:focus {
+    outline: none;
+}
+
+@media (min-width: 1024px) {
+    .input-button-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%
+    }
+    
+    .input-section {
+        max-width: 65%
+    }
+
+    .input-section h1 {
+        padding: 1em 0 0 0;
+        font-size: 2rem;
+    }
+
+    .input-section h2 {
+        max-width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .input-section input {
+        padding: 1.3em;
+    }
+}

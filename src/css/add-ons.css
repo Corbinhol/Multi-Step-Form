@@ -1,0 +1,64 @@
+.input-section__step3 h2 {
+    margin-bottom: 2em;
+    
+}
+
+input[type="checkbox"] {
+    z-index: 1;
+}
+
+.checkbox-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: .1em var(--light-gray) solid;
+    padding: .5em 1em;
+    margin: 1em 0;
+    border-radius: .5em;
+    width: 100%;
+    background: none;
+    z-index: 1;
+}
+
+.checkbox-section:hover {
+    transition: .2s;
+    border: .1em var(--purplish-blue) solid;
+}
+
+.checkbox-section input {
+    z-index: 1;
+}
+
+.checkbox-section .first-half {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-section .text-section {
+    margin: .5em 1em;
+}
+
+.checkbox-section p {
+    color: var(--cool-gray);
+    margin: 0;
+    height: fit-content;
+    font-size: .8rem;
+}
+
+.checkbox-section h1 {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    width: fit-content
+}
+
+.checkbox-section .price {
+    color: var(--purplish-blue)
+}
+
+@media (min-width: 1024px) {
+    .checkbox-section p {
+        font-size: .9rem;
+    }
+}
