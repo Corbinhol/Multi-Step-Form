@@ -8,5 +8,4 @@ import '../css/add-ons.css';
 import '../css/summary.css';
 import '../css/thank-you.css'
 
-import './continue_button.js'
 import './main.js'

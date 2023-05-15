@@ -51,7 +51,7 @@
           </ul>
         </div>
         <div class="input-button-section">
-          <div id="input-section__step1" class="input-section input-section__step1 display-none"> 
+          <div id="input-section__step1" class="input-section input-section__step1"> 
             <h1>Personal info</h1>
             <h2>Please provide your name, email address, and phone number</h2>
             <div class="text-section">
@@ -76,7 +76,7 @@
               <input id="phone-input" type="text" placeholder="+1 (123) 456 7890">
             </div>
           </div>
-          <div id="input-section__step2" class="input-section input-section__step2">
+          <div id="input-section__step2" class="input-section input-section__step2  display-none">
             <h1>Select your plan</h1>
             <h2>You have the option of monthly or yearly billing</h2>
             <div class="buttons-section">
@@ -149,7 +149,7 @@
             </button>
           </div>
           <div id="input-section__step4" class="input-section input-section__step4 display-none">
-            <div class="step4-part1" id="step4-part1">
+            <div class="step4-part1  display-none" id="step4-part1">
               <h1>Finishing Up</h1>
               <h2>Double-check everything looks OK before confirming</h2>
               <div class="prices">
@@ -158,29 +158,29 @@
                     <h2><span id="plan-name">Arcade</span> (<span id="charge-time">Monthly</span>)</h2> 
                     <button href="" id="change-button">Change</button>
                   </div>
-                  <p class="price"><b>$9/mo</b></p>
+                  <p class="price" id="plan-price"><b>$9/mo</b></p>
                 </div>
-                <hr>
-                <div class="sub-service">
+                <hr id="divider">
+                <div class="sub-service" id="online-service-listing">
                   <p>Online Service</p>
-                  <p class="price">+$1/mo</p>
+                  <p class="price" id="online-price">+$1/mo</p>
                 </div>
-                <div class="sub-service">
+                <div class="sub-service" id="storage-service-listing">
                   <p>Larger Storage</p>
-                  <p class="price">+$2/mo</p>
+                  <p class="price" id="storage-price">+$2/mo</p>
                 </div>
-                <div class="sub-service">
+                <div class="sub-service"  id="profile-service-listing">
                   <p>Customizable Profile</p>
-                  <p class="price">+$2/mo</p>
+                  <p class="price" id="profile-price">+$2/mo</p>
                 </div>
               </div>
               <div class="tax-section">
                 <p>Tax</p>
-                <p class="price">+$0.83/mo</p>
+                <p id="tax-price" class="price">+$0.83/mo</p>
               </div>
               <div class="total-section">
                 <p>Total (per month)</p>
-                <h3>+$12/mo</h3>
+                <h3 id="total-price">$12/mo</h3>
               </div>
             </div>
             <div class="step4-part2 display-none" id="step4-part2">

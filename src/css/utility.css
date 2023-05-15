@@ -98,6 +98,9 @@ p {
     color: var(--marine-blue-light);
 }
 
+.input-button-section {
+    overflow: hidden;
+}
 
 @media (min-width: 1024px) {
     p {
