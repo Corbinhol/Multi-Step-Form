@@ -7,3 +7,5 @@ import '../css/select-plan.css';
 import '../css/add-ons.css';
 import '../css/summary.css';
 import '../css/thank-you.css'
+
+import './main.js'

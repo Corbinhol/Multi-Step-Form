@@ -43,6 +43,10 @@ button:hover {
     cursor: pointer
 }
 
+button * {
+    cursor: pointer !important;
+}
+
 body {
     background-color: var(--light-gray);
     min-height: 100vh
@@ -94,6 +98,9 @@ p {
     color: var(--marine-blue-light);
 }
 
+.input-button-section {
+    overflow: hidden;
+}
 
 @media (min-width: 1024px) {
     p {
