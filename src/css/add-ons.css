@@ -20,6 +20,11 @@ input[type="checkbox"] {
     z-index: 1;
 }
 
+.checkbox-section.selected {
+    border: .1em var(--purplish-blue) solid;
+    background-color: var(--purplish-blue-faded);
+}
+
 .checkbox-section:hover {
     transition: .2s;
     border: .1em var(--purplish-blue) solid;

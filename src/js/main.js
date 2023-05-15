@@ -12,7 +12,13 @@ let step2Indicater = document.getElementById("step2-indicater");
 let step3Indicater = document.getElementById("step3-indicater");
 let step4Indicater = document.getElementById("step4-indicater");
 
-let currentPage = 1;
+//Plan Details (These would be forwarded to the backend server for charging)
+let currentPlan = 1; //1 = Arcade, 2 = Advanced, 3 = Pro
+let onlineService = false;
+let largerStorage = false;
+let customizableProfile = false;
+
+
 
 //These functions make it easier to switch between various
 //Steps
@@ -101,9 +107,9 @@ function show5() {
     continueButton.classList.add("display-hidden");
 }
 
+let currentPage = 1;
+
 //Plan Selection Code
-let currentPlan = 1; //defaults to first
-let isYear = false; //defaults to month
 let arcadeButton = document.getElementById("arcade-button");
 let advancedButton = document.getElementById("advanced-button");
 let proButton = document.getElementById("pro-button");
@@ -131,8 +137,9 @@ proButton.addEventListener("click", () => {
 })
 
 let monthYearCheckbox = document.getElementById("year-month-checkbox");
+let isYear = false; //defaults to month
 monthYearCheckbox.addEventListener("click", () => {
-    if(isYear) {
+    if(isYear) { //If Switching to month
         isYear = false;
         document.getElementById("month-label").classList.add('selected')
         document.getElementById("year-label").classList.remove('selected')
@@ -141,7 +148,11 @@ monthYearCheckbox.addEventListener("click", () => {
         document.getElementById("yearly-label1").classList.add('display-hidden');
         document.getElementById("yearly-label2").classList.add('display-hidden');
         document.getElementById("yearly-label3").classList.add('display-hidden');
-    } else {
+
+        document.getElementById("button-price-1").innerHTML = "$9/mo";
+        document.getElementById("button-price-2").innerHTML = "$12/mo";
+        document.getElementById("button-price-3").innerHTML = "$15/mo";
+    } else { //If Switching to year
         isYear = true;
         document.getElementById("month-label").classList.remove('selected')
         document.getElementById("year-label").classList.add('selected')
@@ -150,6 +161,49 @@ monthYearCheckbox.addEventListener("click", () => {
         document.getElementById("yearly-label1").classList.remove('display-hidden');
         document.getElementById("yearly-label2").classList.remove('display-hidden');
         document.getElementById("yearly-label3").classList.remove('display-hidden');
+
+        document.getElementById("button-price-1").innerHTML = "$90/yr";
+        document.getElementById("button-price-2").innerHTML = "$120/yr";
+        document.getElementById("button-price-3").innerHTML = "$150/yr";
+    }
+})
+
+//add-on page code
+
+
+document.getElementById("online-button").addEventListener("click", () => {
+    if(onlineService) {
+        onlineService = false;
+        document.getElementById("online-button").classList.remove("selected")
+        document.getElementById("online-checkbox").checked = false;
+    } else {
+        onlineService = true;
+        document.getElementById("online-button").classList.add("selected")
+        document.getElementById("online-checkbox").checked = true;
+    }
+})
+
+document.getElementById("storage-button").addEventListener("click", () => {
+    if(largerStorage) {
+        largerStorage = false;
+        document.getElementById("storage-button").classList.remove("selected")
+        document.getElementById("storage-checkbox").checked = false;
+    } else {
+        largerStorage = true;
+        document.getElementById("storage-button").classList.add("selected")
+        document.getElementById("storage-checkbox").checked = true;
+    }
+})
+
+document.getElementById("profile-button").addEventListener("click", () => {
+    if(customizableProfile) {
+        customizableProfile = false;
+        document.getElementById("profile-button").classList.remove("selected")
+        document.getElementById("profile-checkbox").checked = false;
+    } else {
+        customizableProfile = true;
+        document.getElementById("profile-button").classList.add("selected")
+        document.getElementById("profile-checkbox").checked = true;
     }
 })
 
@@ -167,6 +221,8 @@ backButton.addEventListener("click", () => {
         show3();
     }
 })
+
+
 
 continueButton.addEventListener("click", () => {
     switch (currentPage) {
@@ -211,8 +267,31 @@ continueButton.addEventListener("click", () => {
             }
             break;
         case 2:
-            document.getElementById("online-service-price").innerHTML = "Test"
+            let mult = 1;
+            let time = "mo";
+            if(isYear) {
+                mult = 10;
+                time = "yr";
+            }
+            document.getElementById("online-service-price").innerHTML = "$" + (1 * mult) + "/" + time;
+            document.getElementById("storage-service-price").innerHTML = "$" + (2 * mult) + "/" + time;
+            document.getElementById("customize-service-price").innerHTML = "$" + (2 * mult) + "/" + time;
             show3();
+            break;
+        case 3: 
+            switch(currentPlan) {
+                case 1: 
+                    document.getElementById("plan-name").innerHTML = "Arcade";
+
+                    break;
+                case 2:
+                    document.getElementById("plan-name").innerHTML = "Advanced";
+                    break;
+                case 3:
+                    document.getElementById("plan-name").innerHTML = "Pro";
+                    break;
+            }
+            show4();
             break;
     }
 })
